@@ -11,7 +11,7 @@ def rnorm(n, mean=0, sd=1):
         The mean value of the normal distribution. Default is 0.
     sd : float, optional
         The standard deviation of the normal distribution. Default is 1.
-
+    
     Returns
     -------
     numpy.ndarray
@@ -23,3 +23,4 @@ def rnorm(n, mean=0, sd=1):
     >>> rnorm(2, mean=5, sd=2)
     array([6.3245, 4.5983])
     """
+    pass
