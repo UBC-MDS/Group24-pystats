@@ -16,7 +16,10 @@ $ pip install pystats
 
 ## Usage
 
-- TODO
+- rnorm:
+- pnorm:
+- qnorm:
+- dnorm:
 
 ## Contributors
 The members of the `pystats` team are:
