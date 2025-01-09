@@ -2,7 +2,7 @@
 
 pystats is a statistical package that performs normal distributions calculations. This package hopes to serve statisticians, data scientists, and researchers looking to derive meaningful insights from their data.
 
-It features the following four functions:
+It features the following functions:
 1. rnorm
 2. pnorm
 3. qnorm
