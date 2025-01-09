@@ -1,6 +1,12 @@
 # pystats
 
-A package for evaluating distributions in python
+pystats is a statistical package that performs normal distributions calculations. This package hopes to serve statisticians, data scientists, and researchers looking to derive meaningful insights from their data.
+
+It features the following four functions:
+1. rnorm
+2. pnorm
+3. qnorm
+4. dnorm
 
 ## Installation
 
