@@ -1,5 +1,5 @@
 # dnorm.py
-def dnorm(x, mean=0, sd=1, graph=True):
+def dnorm(x, mean=0, sd=1, graph=False):
     """
     Calculates the Probability Density of the normal distribution at a given point and optionally plots the PDF.
 
