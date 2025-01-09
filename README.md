@@ -12,9 +12,16 @@ $ pip install pystats
 
 - TODO
 
+## Contributors
+The members of the `pystats` team are:
+- Sarah Eshafi
+- Jason Lee
+- Abdul Safdar
+- Rong Wan
+
 ## Contributing
 
-Interested in contributing? Check out the contributing guidelines. Please note that this project is released with a Code of Conduct. By contributing to this project, you agree to abide by its terms.
+Interested in contributing? Check out the contributing guidelines. Please note that this project is released with a Code of Conduct. By contributing to this project, you agree to abide by its terms. For more details refer to our Contributing.md file.
 
 ## License
 
