@@ -16,10 +16,10 @@ $ pip install pystats
 
 ## Usage
 
-- rnorm(n, mean=0, sd=1): Returns a NumPy array of length n containing normally distributed random variables with mean equal to  `mean` and sd equal to `sd`. 
-- pnorm(q, mean=0, sd=1, lower_tail=True): Calculates a probability value at the given quantile value of the specified cdf.
-- qnorm(q, mean=0, sd=1, lower_tail=True): Calculates the value of the inverse cumulative density function (cdf) of the normal distribution. 
-- dnorm(x, mean=0, sd=1): Calculates the Probability Density of the normal distribution at a given point
+- **rnorm(n, mean=0, sd=1)**: Returns a NumPy array of length n containing normally distributed random variables with mean equal to  `mean` and sd equal to `sd`. 
+- **pnorm(q, mean=0, sd=1, lower_tail=True)**: Calculates a probability value at the given quantile value of the specified cdf.
+- **qnorm(q, mean=0, sd=1, lower_tail=True)**: Calculates the value of the inverse cumulative density function (cdf) of the normal distribution. 
+- **dnorm(x, mean=0, sd=1)**: Calculates the Probability Density of the normal distribution at a given point
 
 ## Contributors
 The members of the `pystats` team are:
