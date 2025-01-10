@@ -39,7 +39,7 @@ Computes the cumulative distribution function (CDF) for a given quantile.
   - `q` (float): Quantile value.
   - `mean` (float): Mean of the normal distribution (default: 0).
   - `sd` (float): Standard deviation of the normal distribution (default: 1).
-  - `lower_tail` (bool): If `True`, returns \( P(X \leq q) \); if `False`, returns \( P(X > q) \) (default: `True`).
+  - `lower_tail` (bool): If `True`, returns \( P(X < q) \); if `False`, returns \( P(X > q) \) (default: `True`).
 - **Returns:** Probability value.
 
 **qnorm(q, mean=0, sd=1, lower_tail=True)**
@@ -49,7 +49,7 @@ Computes the quantile (inverse CDF) for a given probability.
   - `q` (float): Probability value.
   - `mean` (float): Mean of the normal distribution (default: 0).
   - `sd` (float): Standard deviation of the normal distribution (default: 1).
-  - `lower_tail` (bool): If `True`, returns the quantile for \( P(X \leq q) \); if `False`, returns the quantile for \( P(X > q) \) (default: `True`).
+  - `lower_tail` (bool): If `True`, returns the quantile for \( P(X < q) \); if `False`, returns the quantile for \( P(X > q) \) (default: `True`).
 - **Returns:** Quantile value.
 
 **dnorm(x, mean=0, sd=1)**
@@ -62,7 +62,7 @@ Calculates the Probability Density of the normal distribution for a given value
 - **Returns:** Probability density value.
 
 ## Python Ecosystem Integration
-**pystats** is designed as a lightweight and intuitive package for normal distribution calculations. The package is heavily inspired by the simple to use statistical functions found in base R. While similar functionality exists in libraries such as **SciPy** and **NumPy**, **pystats** focuses exclusively on normal distributions, offering simplified functions with user-friendly syntax designed for statistical analysis. By providing well-documented and focused functionality, it serves as a niche yet essential tool in the Python ecosystem.
+**pystats** is designed as a lightweight and intuitive package for normal distribution calculations. While similar functionality exists in libraries such as **SciPy** and **NumPy**, **pystats** focuses exclusively on normal distributions, offering simplified functions with user-friendly syntax designed for statistical analysis. By providing well-documented and focused functionality, it serves as a niche yet essential tool in the Python ecosystem.
 
 ### Related Packages:
 - [numpy.random.normal] (https://numpy.org/doc/2.1/reference/random/generated/numpy.random.normal.html) - Generates random samples from a normal distribution.
