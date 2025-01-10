@@ -1,25 +1,12 @@
 # pystats
 
-pystats is a statistical package that performs normal distributions calculations. This package hopes to serve statisticians, data scientists, and researchers looking to derive meaningful insights from their data.
+**pystats** is a lightweight statistical package that performs normal distributions calculations. Inspired by the simplicity and functionality of statistical tools in base R, **pystats** provides a focused set of functions for generating random samples, calculating cumulative probabilities, determining quantiles, and evaluating probability density functions. This package hopes to serve statisticians, data scientists, and researchers looking to derive meaningful insights from their data.
 
-It features the following functions:
-1. rnorm
-2. pnorm
-3. qnorm
-4. dnorm
-
-## Installation
-
-```bash
-$ pip install pystats
-```
-
-## Usage
-
-- **rnorm(n, mean=0, sd=1)**: Returns a NumPy array of length n containing normally distributed random variables with mean equal to  `mean` and sd equal to `sd`. 
-- **pnorm(q, mean=0, sd=1, lower_tail=True)**: Calculates a probability value at the given quantile value of the specified cdf.
-- **qnorm(q, mean=0, sd=1, lower_tail=True)**: Calculates the value of the inverse cumulative density function (cdf) of the normal distribution. 
-- **dnorm(x, mean=0, sd=1)**: Calculates the Probability Density of the normal distribution at a given point
+It features the following core functions:
+1. rnorm: Generate random samples from a normal distribution
+2. pnorm: Compute probabilities for a given quantile (cumulative distribution function)
+3. qnorm: Calculate the quantile (inverse of cumulative distribution function) for a given probability
+4. dnorm: Evaluate the probability density function.
 
 ## Contributors
 The members of the `pystats` team are:
@@ -27,6 +14,36 @@ The members of the `pystats` team are:
 - Jason Lee
 - Abdul Safdar
 - Rong Wan
+
+## Installation
+
+```bash
+$ pip install pystats
+```
+
+## Functions
+
+### **rnorm**(n, mean=0, sd=1):  
+Generates a NumPy array of length `n` containing normally distributed random variables with mean equal to  `mean` and sd equal to `sd`.
+
+### **pnorm**(q, mean=0, sd=1, lower_tail=True):  
+Computes the cumulative distribution function (CDF) for a given quantile.
+
+### **qnorm**(p, mean=0, sd=1, lower_tail=True):  
+Computes the quantile (inverse CDF) for a given probability.
+
+### **dnorm**(x, mean=0, sd=1)  
+Calculates the Probability Density of the normal distribution for a given value
+
+## Python Ecosystem Integration
+**pystats** is designed as a lightweight and intuitive package for normal distribution calculations. While similar functionality exists in libraries such as **SciPy** and **NumPy**, **pystats** focuses exclusively on normal distributions, offering simplified functions with user-friendly syntax designed for statistical analysis. By providing well-documented and focused functionality, it serves as a niche yet essential tool in the Python ecosystem.
+
+### Related Packages:
+- [numpy.random.normal] (https://numpy.org/doc/2.1/reference/random/generated/numpy.random.normal.html) - Generates random samples from a normal distribution.
+- [scipy.stats.norm] (https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html) - PDF and CDF calculations for normal distributions.
+
+## Usage
+Work in progress. To be updated in a future release.
 
 ## Contributing
 
