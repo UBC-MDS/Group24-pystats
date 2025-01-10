@@ -23,43 +23,17 @@ $ pip install pystats
 
 ## Functions
 
-**rnorm(n, mean=0, sd=1)**: 
+### **rnorm**(n, mean=0, sd=1):  
 Generates a NumPy array of length `n` containing normally distributed random variables with mean equal to  `mean` and sd equal to `sd`.
 
-- **Parameters:**
-  - `n` (int): Number of random samples to generate.
-  - `mean` (float): Mean of the normal distribution (default: 0).
-  - `sd` (float): Standard deviation of the normal distribution (default: 1).
-- **Returns:** NumPy array of random samples.
-
-**pnorm(q, mean=0, sd=1, lower_tail=True)**
+### **pnorm**(q, mean=0, sd=1, lower_tail=True):  
 Computes the cumulative distribution function (CDF) for a given quantile.
 
-- **Parameters:**
-  - `q` (float): Quantile value.
-  - `mean` (float): Mean of the normal distribution (default: 0).
-  - `sd` (float): Standard deviation of the normal distribution (default: 1).
-  - `lower_tail` (bool): If `True`, returns \( P(X < q) \); if `False`, returns \( P(X > q) \) (default: `True`).
-- **Returns:** Probability value.
-
-**qnorm(q, mean=0, sd=1, lower_tail=True)**
+### **qnorm**(p, mean=0, sd=1, lower_tail=True):  
 Computes the quantile (inverse CDF) for a given probability.
 
-- **Parameters:**
-  - `q` (float): Probability value.
-  - `mean` (float): Mean of the normal distribution (default: 0).
-  - `sd` (float): Standard deviation of the normal distribution (default: 1).
-  - `lower_tail` (bool): If `True`, returns the quantile for \( P(X < q) \); if `False`, returns the quantile for \( P(X > q) \) (default: `True`).
-- **Returns:** Quantile value.
-
-**dnorm(x, mean=0, sd=1)**
+### **dnorm**(x, mean=0, sd=1)  
 Calculates the Probability Density of the normal distribution for a given value
-
-- **Parameters:**
-  - `x` (float): Value at which to evaluate the PDF.
-  - `mean` (float): Mean of the normal distribution (default: 0).
-  - `sd` (float): Standard deviation of the normal distribution (default: 1).
-- **Returns:** Probability density value.
 
 ## Python Ecosystem Integration
 **pystats** is designed as a lightweight and intuitive package for normal distribution calculations. While similar functionality exists in libraries such as **SciPy** and **NumPy**, **pystats** focuses exclusively on normal distributions, offering simplified functions with user-friendly syntax designed for statistical analysis. By providing well-documented and focused functionality, it serves as a niche yet essential tool in the Python ecosystem.
