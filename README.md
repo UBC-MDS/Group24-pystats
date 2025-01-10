@@ -68,6 +68,8 @@ Calculates the Probability Density of the normal distribution for a given value
 - [numpy.random.normal] (https://numpy.org/doc/2.1/reference/random/generated/numpy.random.normal.html) - Generates random samples from a normal distribution.
 - [scipy.stats.norm] (https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html) - PDF and CDF calculations for normal distributions.
 
+## Usage
+Work in progress. To be updated in a future release.
 
 ## Contributing
 
