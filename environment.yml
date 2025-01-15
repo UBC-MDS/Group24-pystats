@@ -1,0 +1,7 @@
+name: pystats
+channels:
+  - conda-forge
+dependencies:
+  - cookiecutter==2.6.0
+  - python==3.11
+  - pytest==8.3.4
