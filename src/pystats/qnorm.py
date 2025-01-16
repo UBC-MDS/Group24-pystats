@@ -1,3 +1,8 @@
+import numpy as np
+from scipy.special import erfinv
+import scipy.stats as stats
+import math
+
 def qnorm(p, mean=0, sd=1, lower_tail=True):
     """
     
@@ -44,3 +49,30 @@ def qnorm(p, mean=0, sd=1, lower_tail=True):
     1.0
 
     """
+
+    # Input type checks
+    if not isinstance(p, (float, int)):
+        raise TypeError(f"Expected input to be float or int, got {type(p)}")
+
+    if not isinstance(mean, (float, int)):
+        raise TypeError(f"Expected input to be float or int, got {type(mean)}")
+    
+    if not isinstance(sd, (float, int)):
+        raise TypeError(f"Expected input to be float or int, got {type(sd)}")
+
+    if not isinstance(lower_tail, bool):
+        raise TypeError(f"Expected input to be float or int, got {type(lower_tail)}")
+
+    # Value checks
+    if not 0 < p < 1:
+        raise ValueError("p must be between 0 and 1 (exclusive).")
+    
+    if not sd > 0:
+        raise ValueError("df must be non-negative")
+    
+    if lower_tail:
+        result = mean + sd * np.sqrt(2) * erfinv(2 * p - 1)
+        return result
+    else:
+        result = mean - sd * np.sqrt(2) * erfinv(2 * p - 1)
+        return result
