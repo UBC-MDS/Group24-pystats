@@ -46,17 +46,8 @@ def test_inputs(p, mean, sd, lower_tail):
     4. lower_tail should always be a boolean 
     """
 
-    if not isinstance(p, (float, int)):
-        raise TypeError(f"Expected input to be float or int, got {type(p)}")
-
-    if not isinstance(mean, (float, int)):
-        raise TypeError(f"Expected input to be float or int, got {type(mean)}")
-    
-    if not isinstance(sd, (float, int)):
-        raise TypeError(f"Expected input to be float or int, got {type(sd)}")
-
-    if not isinstance(lower_tail, bool):
-        raise TypeError(f"Expected input to be float or int, got {type(lower_tail)}")
+    with pytest.raises(TypeError):
+        qnorm(p, mean, sd, lower_tail)
 
     if p < 0 or p > 1: 
         with pytest.raises(ValueError, match="Parameter 'p' stands for probability and should always be a float between 0 and 1."):
