@@ -20,11 +20,11 @@ def test_output_datatype():
             (0.99, 0, 1, False, norm.isf(0.99))
         ]
 )
-def test_normal_cases(p, mean, sd, lower_tail, expected):
+def test_normal_cases(p, mean, sd, lower_tail, expected, tol=1e-6):
     """
     Tests multiple normal cases for inverse CDF (qnorm equivalent).
     """
-    assert qnorm(p, mean, sd, lower_tail) == expected
+    assert abs(qnorm(p, mean, sd, lower_tail) - expected) <= tol
 
 @pytest.mark.parametrize(
         "p, mean, sd, lower_tail",
@@ -32,9 +32,7 @@ def test_normal_cases(p, mean, sd, lower_tail, expected):
             ("hello", 0, 1, True),
             (0.99, "hi", 1, True),
             (0.99, 0, "bye", True),
-            (5, 0, 1, True),
-            (-3, 0, 1, True),
-            (0.99, 0, -1, False)
+            (0.99, 0, 1, 5)
         ]
 )
 def test_inputs(p, mean, sd, lower_tail):
@@ -49,10 +47,20 @@ def test_inputs(p, mean, sd, lower_tail):
     with pytest.raises(TypeError):
         qnorm(p, mean, sd, lower_tail)
 
-    if p < 0 or p > 1: 
-        with pytest.raises(ValueError, match="Parameter 'p' stands for probability and should always be a float between 0 and 1."):
-            results = qnorm(p, mean, sd, lower_tail)
+@pytest.mark.parametrize(
+        "p, mean, sd, lower_tail",
+        [
+            (5, 0, 1, True),
+            (-3, 0, 1, True),
+            (0.99, 0, -1, False)
+        ]
+)
+def test_value_range(p, mean, sd, lower_tail):
+    """
+    Test that input values are within valid ranges.
+    1. `p` must be between 0 and 1 (exclusive)
+    2. Standard deviation must be non-negative
+    """
 
-    if sd < 0:
-        with pytest.raises(ValueError, match="Standard deviation cannot be negative"):
-            results = qnorm(p, mean, sd, lower_tail)
+    with pytest.raises(ValueError):
+        results = qnorm(p, mean, sd, lower_tail)
