@@ -25,3 +25,4 @@ def pnorm(q, mean=0, sd=1, lower_tail=True):
     >>> pnorm(69, mean=60, sd=5, lower_tail=False)
     0.03593032
     """
+    pass
