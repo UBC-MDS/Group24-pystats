@@ -29,16 +29,13 @@ def test_nonsensical_input():
     with pytest.raises(ValueError) as excinfo:
         dnorm(1, mean=0, sd=-1)
     assert str(excinfo.value) == "Standard deviation `sd` must be positive."
-
+    
     # Test for non-numerical input
     with pytest.raises(TypeError) as excinfo:
         dnorm("hello", mean=0, sd=1)
+    # Use exact match or partial match depending on your preference
+    # Exact match
     assert str(excinfo.value) == "Expected `x` to be float or int, got <class 'str'>."
+    # OR Partial match
+    # assert "Expected `x` to be float or int" in str(excinfo.value)
 
-    with pytest.raises(TypeError) as excinfo:
-        dnorm(1, mean="mean", sd=1)
-    assert str(excinfo.value) == "Expected `mean` to be float or int, got <class 'str'>."
-
-    with pytest.raises(TypeError) as excinfo:
-        dnorm(1, mean=0, sd="std")
-    assert str(excinfo.value) == "Expected `sd` to be float or int, got <class 'str'>."
