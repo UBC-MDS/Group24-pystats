@@ -51,24 +51,18 @@ def qnorm(p, mean=0, sd=1, lower_tail=True):
     """
 
     # Input type checks
-    if not isinstance(p, (float, int)):
-        raise TypeError(f"Expected input to be float or int, got {type(p)}")
-
-    if not isinstance(mean, (float, int)):
-        raise TypeError(f"Expected input to be float or int, got {type(mean)}")
-    
-    if not isinstance(sd, (float, int)):
-        raise TypeError(f"Expected input to be float or int, got {type(sd)}")
+    if not all(isinstance(param, (int, float)) for param in [p, mean, sd]):
+        raise TypeError(f"Input parameters must be numerical")
 
     if not isinstance(lower_tail, bool):
-        raise TypeError(f"Expected input to be float or int, got {type(lower_tail)}")
+        raise TypeError(f"Expected input to be boolean, got {type(lower_tail)}")
 
     # Value checks
     if not 0 < p < 1:
         raise ValueError("p must be between 0 and 1 (exclusive).")
     
     if not sd > 0:
-        raise ValueError("df must be non-negative")
+        raise ValueError("standard deviation must be non-negative")
     
     if lower_tail:
         result = mean + sd * np.sqrt(2) * erfinv(2 * p - 1)
