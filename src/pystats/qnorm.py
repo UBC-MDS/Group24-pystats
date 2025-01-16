@@ -71,6 +71,8 @@ def qnorm(p, mean=0, sd=1, lower_tail=True):
         raise ValueError("df must be non-negative")
     
     if lower_tail:
-        return mean + sd * np.sqrt(2) * erfinv(2 * p - 1)
+        result = mean + sd * np.sqrt(2) * erfinv(2 * p - 1)
+        return result
     else:
-        return mean - sd * np.sqrt(2) * erfinv(2 * p - 1)
+        result = mean - sd * np.sqrt(2) * erfinv(2 * p - 1)
+        return result
