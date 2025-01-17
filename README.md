@@ -17,9 +17,49 @@ The members of the `pystats` team are:
 
 ## Installation
 
+To use `pystats`, please follow these instructions:
+
+### 1. Clone the repository
+
+Navigate to the green "Code" button at the top of this repository. Copy the SSH link (if you have SSH configured on your machine) or the HTTPS link. In terminal, navigate to the folder you would like to clone this repository and type:
 ```bash
-$ pip install pystats
+$ git clone <LINK>
 ```
+
+### 2. Create the virtual environment
+
+Still in the terminal, navigate to the root of the newly cloned repository and type:
+
+```bash
+$ conda env create environment.yml
+```
+
+### 3. Install the package
+
+Install `pystats` with the following command:
+
+```bash
+$ poetry install
+```
+
+### 4. Open a Python Interpreter and import the functions
+
+In the terminal, input:
+
+```bash
+$ python
+```
+
+This opens a Python interpreter. Input the following commands to import the functions:
+
+```python
+>>> from pystats.pnorm import pnorm
+>>> from pystats.dnorm import dnorm
+>>> from pystats.qnorm import qnorm
+>>> from pystats.rnorm import rnorm
+```
+
+You can now use the functions in your terminal Python interpreter!
 
 ## Functions
 
