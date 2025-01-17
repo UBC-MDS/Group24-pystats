@@ -1,7 +1,7 @@
 import pytest
 import pandas as pd
 import numpy as np
-from src.pystats.dnorm import dnorm
+from pystats.dnorm import dnorm
 
 def test_output_datatype():
     """
