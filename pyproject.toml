@@ -11,11 +11,11 @@ python = "^3.11"
 colorama = "^0.4.6"
 numpy = "^2.2.1"
 scipy = "^1.15.1"
+pandas = "^2.2.3"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.4"
 pytest-cov = "^6.0.0"
-pandas = "^2.2.3"
 
 [tool.semantic_release]
 version_toml = [
