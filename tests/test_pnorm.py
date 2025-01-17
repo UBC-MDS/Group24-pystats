@@ -16,19 +16,28 @@ def test_output_datatype():
             (2, 5, 1.5, False, 0.9772499),
             (0.95, 0, 1, True, 0.8289439),
             (780, 20, 600, True, 0.8973627),
-            (780, 20, 600, True, 0.1026373),
+            (780, 20, 600, False, 0.1026373),
             (0, 0, 1, True, 0.5)
         ]
 )
 def test_normal_cases(q, mean, sd, lower_tail, expected):
     """
-    Tests multiple normal cases for inverse CDF (qnorm equivalent).
+    Tests multiple normal cases for CDF.
     """
     actual = pnorm(q, mean, sd, lower_tail)
     assert math.isclose(actual, expected, abs_tol=1e-6)
 
 
-def test_wrong_inputs():
+@pytest.mark.parametrize(
+        "q, mean, sd, lower_tail",
+        [
+            ("2", 5, 1.5, True),
+            (2, [5], 1.5, True),
+            (2, 5, "1.5", True),
+            (2, 5, 1.5, 10)
+        ]
+)
+def test_wrong_inputs(q, mean, sd, lower_tail):
     """
     Tests input types 
     1. `q` should always be a float
@@ -37,11 +46,7 @@ def test_wrong_inputs():
     4. lower_tail should always be a boolean 
     """
     with pytest.raises(TypeError):
-        pnorm("2", mean=5, sd=1.5, lower_tail=True)
-        pnorm(2, mean=[5], sd=1.5, lower_tail=True)
-        pnorm(2, mean=5, sd=1.5, lower_tail=True)
-        pnorm(2, mean=5, sd="1.5", lower_tail=True)
-        pnorm(2, mean=5, sd=1.5, lower_tail="True")
+        pnorm(q, mean, sd, lower_tail)
 
 def test_wrong_input_range():
     """

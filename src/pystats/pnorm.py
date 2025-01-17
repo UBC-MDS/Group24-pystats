@@ -1,3 +1,6 @@
+import numpy as np
+from scipy.special import erf
+
 def pnorm(q, mean=0, sd=1, lower_tail=True):
     """
     This function returns the value of the cumulative density function (cdf) of the 
@@ -25,4 +28,20 @@ def pnorm(q, mean=0, sd=1, lower_tail=True):
     >>> pnorm(69, mean=60, sd=5, lower_tail=False)
     0.03593032
     """
-    pass
+    # Input type checks
+    if not all(isinstance(param, (int, float)) for param in [q, mean, sd]):
+        raise TypeError(f"Input parameters must be numerical")
+
+    if not isinstance(lower_tail, bool):
+        raise TypeError(f"Expected variable lower_tail to be boolean, got {type(lower_tail)}")
+
+    # Value checks    
+    if not sd >= 0:
+        raise ValueError("Standard deviation must be non-negative")
+    
+    if lower_tail:
+        result = 1/2 * (1 + erf((q-mean)/(np.sqrt(2)*sd)))
+        return result
+    else:
+        result = 1 - 1/2 * (1 + erf((q-mean)/(np.sqrt(2)*sd)))
+        return result
