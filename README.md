@@ -81,8 +81,8 @@ Calculates the Probability Density of the normal distribution for a given value
 `pystats` is designed as a lightweight and intuitive package for normal distribution calculations. While similar functionality exists in libraries such as **SciPy** and **NumPy**, `pystats` focuses exclusively on normal distributions, offering simplified functions with user-friendly syntax designed for statistical analysis. By providing well-documented and focused functionality, it serves as a niche yet essential tool in the Python ecosystem.
 
 ### Related Packages:
-- [numpy.random.normal] (https://numpy.org/doc/2.1/reference/random/generated/numpy.random.normal.html) - Generates random samples from a normal distribution.
-- [scipy.stats.norm] (https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html) - PDF and CDF calculations for normal distributions.
+- [numpy.random.normal](https://numpy.org/doc/2.1/reference/random/generated/numpy.random.normal.html) - Generates random samples from a normal distribution.
+- [scipy.stats.norm](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html) - PDF and CDF calculations for normal distributions.
 
 ## Usage
 Work in progress. To be updated in a future release.
