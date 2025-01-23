@@ -1,3 +1,5 @@
+[![Documentation Status](https://readthedocs.org/projects/pystats-norm/badge/?version=latest)](https://pystats-norm.readthedocs.io/en/latest/?badge=latest)
+
 # pystats
 
 **pystats** is a lightweight statistical package that performs normal distributions calculations. Inspired by the simplicity and functionality of statistical tools in base R, **pystats** provides a focused set of functions for generating random samples, calculating cumulative probabilities, determining quantiles, and evaluating probability density functions. This package hopes to serve statisticians, data scientists, and researchers looking to derive meaningful insights from their data.
