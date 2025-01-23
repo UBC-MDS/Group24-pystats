@@ -2,6 +2,10 @@
 
 # pystats
 
+<a href="https://github.com/UBC-MDS/Group24-pystats">
+  <img src="https://github.com/UBC-MDS/Group24-pystats/blob/main/assets/pystat_logo.png" alt="App Platform" width="200">
+</a>
+
 `pystats` is a lightweight statistical package that performs normal distributions calculations. Inspired by the simplicity and functionality of statistical tools in base R, `pystats` provides a focused set of functions for generating random samples, calculating cumulative probabilities, determining quantiles, and evaluating probability density functions. This package hopes to serve statisticians, data scientists, and researchers looking to derive meaningful insights from their data.
 
 It features the following core functions:
