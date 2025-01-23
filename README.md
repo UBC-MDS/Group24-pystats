@@ -74,7 +74,7 @@ Computes the cumulative distribution function (CDF) for a given quantile.
 ### `qnorm(p, mean=0, sd=1, lower_tail=True)`:  
 Computes the quantile (inverse CDF) for a given probability.
 
-### `dnorm(x, mean=0, sd=1)`  
+### `dnorm(x, mean=0, sd=1)`:  
 Calculates the Probability Density of the normal distribution for a given value
 
 ## Python Ecosystem Integration
