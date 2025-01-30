@@ -9,11 +9,11 @@ def pnorm(q, mean=0, sd=1, lower_tail=True):
 
     Parameters
     ----------
-    q : np.float
+    q : np.float64
         The quantile for which you want the `cdf` value.
-    mean : np.float, optional
+    mean : np.float64, optional
         The mean value of the normal distribution. Default is 0.
-    sd : np.float, optional
+    sd : np.float64, optional
         The standard deviation of the normal distribution. Default is 1.
     lower_tail : bool, optional
         If True, probabilities are P(X < q), otherwise, P(X > q). Default is True.
