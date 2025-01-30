@@ -1,4 +1,4 @@
-from pystats.pnorm import pnorm
+from pystats_norm.pnorm import pnorm
 import pytest
 import math
 

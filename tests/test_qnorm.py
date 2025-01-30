@@ -1,4 +1,4 @@
-from pystats.qnorm import qnorm
+from pystats_norm.qnorm import qnorm
 import pytest
 import pandas as pd
 from scipy.stats import norm

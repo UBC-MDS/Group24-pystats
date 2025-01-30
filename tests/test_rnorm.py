@@ -1,4 +1,4 @@
-from pystats.rnorm import rnorm
+from pystats_norm.rnorm import rnorm
 import pytest
 import numpy as np
 
