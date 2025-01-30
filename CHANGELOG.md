@@ -1,6 +1,15 @@
 # CHANGELOG
 
 
+## v0.1.3 (2025-01-30)
+
+### Bug Fixes
+
+- Updated readme to new package name, updated installation instructions, and added some detail to
+  usage section. Feedback addressed by Sarah Eshafi.
+  ([`5bbb03a`](https://github.com/UBC-MDS/Group24-pystats/commit/5bbb03a3ddac79e137047d35123c1411eaff7537))
+
+
 ## v0.1.2 (2025-01-30)
 
 ### Bug Fixes
