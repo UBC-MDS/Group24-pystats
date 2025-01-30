@@ -2,7 +2,7 @@ import numpy as np
 
 def rnorm(n, mean=0, sd=1):
     """
-    This function generates a vector (NumPy array) of length n normally distributed 
+    This function generates an array of length n normally distributed 
     random variables with mean equal to the `mean` and sd equal to the `sd`. 
 
     Parameters
@@ -16,8 +16,8 @@ def rnorm(n, mean=0, sd=1):
     
     Returns
     -------
-    numpy.ndarray
-        A NumPy array of length n containing normally distributed random variables 
+    np.ndarray
+        A array of length n containing normally distributed random variables 
         with mean equal to  `mean` and sd equal to `sd`. 
 
     Examples
@@ -30,13 +30,13 @@ def rnorm(n, mean=0, sd=1):
     if not isinstance(n, int):
         raise ValueError('n must be an integer!')
     if n<0:
-        raise ValueError('n must be positive integer!')
+        raise ValueError('n must be a positive integer!')
     if not isinstance(mean, (int, float)):
-        raise ValueError('the mean value must be a number!')
+        raise ValueError('The mean value must be a number!')
     if not isinstance(sd, (int, float)):
-        raise ValueError('the sd value must be a number!')
+        raise ValueError('The standard deviation value must be a number!')
     if sd<0:
-        raise ValueError('sd must be a positive number!')
+        raise ValueError('The standard deviation must be a positive number!')
     
     #Return an empty array if n = 0 is passed
     if n == 0:

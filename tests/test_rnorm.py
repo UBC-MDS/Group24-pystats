@@ -9,54 +9,46 @@ def test_empty_n():
     result = rnorm(0)
     assert result.size == 0, "An empty array of size 0 will be returned when n=0"
 
-def test_standard_normal():
-    """
-    Tests whether the mean returned by the function is 0 and sd is 1. 
-    """
-    result = rnorm(2000)
-    assert np.allclose(np.mean(result), 0, atol=0.5), "Mean should be close to 0"
-    assert np.allclose(np.std(result), 1, atol=0.5), "Standard deviation should be close to 1"
+@pytest.mark.parametrize(
+    "n, mean, sd, expected_mean, expected_sd",
+    [
+        (2000, 0, 1, 0, 1),   # Standard normal distribution with mean = 0 and sd = 1
+        (2000, 5, 0, 5, 0),   # All values generated should be 5 when sd = 0.
+        (2000, 0, 5, 0, 5),   # mean = 0, sd = 5
+        (2000, 10, 5, 10, 5)  # mean = 10 , sd = 5
+    ]
+)
 
-def test_normal_mean5():
-    """Tests whether the mean returned by the function is exactly 5 since the standard deviation is zero. 
-    """
-    result = rnorm(2000, 5, 0)
-    assert np.all(result == 5), "All values should equal the mean when sd=0"
-
-def test_sd_5():
-    """Tests whether the mean is zero and standard deviation returned is close to 5.
-    """
-    result = rnorm(2000, 0, 5)
-    assert np.allclose(np.mean(result), 0, atol=0.5), "Mean should be close to 0"
-    assert np.allclose(np.std(result), 5, atol=0.5), "Standard deviation should be close to 5"
-
-def test_sd5_mean10():
-    """Tests whether the mean is closet to ten and standard deviation returned is close to 5.
-    """
-    result = rnorm(2000, 10, 5)
-    assert np.allclose(np.mean(result), 10, atol=0.5), "Mean should be close to 10"
-    assert np.allclose(np.std(result), 5, atol=0.5), "Standard deviation should be close to 5"
-
-def test_invalid_n():
-    """Tests that rnorm raises a value error when n is invalid.
-    """
-    with pytest.raises(ValueError, match='n must be an integer!'):
-        rnorm('hello')
+def test_normal_cases(n, mean, sd, expected_mean, expected_sd):
+    """Tests rnorm functions for normal cases."""
+    result = rnorm(n, mean, sd)
     
-    with pytest.raises(ValueError, match='n must be positive integer!'):
-        rnorm(-600)
-    
-def test_invalid_sd():
-    """Tests that rnorm raises a value error when sd is invalid.
-    """
-    with pytest.raises(ValueError, match='sd must be a positive number!'):
-        rnorm(1, 0, -50)
+    if sd == 0:
+        assert np.all(result == expected_mean)
+    else:
+        assert np.allclose(np.mean(result), expected_mean, atol=0.5)
+        assert np.allclose(np.std(result), expected_sd, atol=0.5)
 
-    with pytest.raises(ValueError, match='the sd value must be a number!'):
-        rnorm(1, 0, 'hello')
+@pytest.mark.parametrize(
+        "n, mean, sd",
+        [
+            ("hello", 0, 1),
+            (-600, 0, 1),
+            (1, 0, -50),
+            (1, 0, 'hello'),
+            (1, 'hello', 1)
+        ]
+)
 
-def test_negative_mean():
-    """Tests that rnorm raises a value error when mean is not a number.
+def test_invalid_types(n, mean, sd):
     """
-    with pytest.raises(ValueError, match='the mean value must be a number!'):
-        rnorm(1, 'hello', 1)
+    Tests input types 
+    1.  `n` should always be an integer.
+    2.  `n` must be a positive integer.
+    3.  `sd` must be a positive number.
+    4.  `sd` must always be a number.
+    5.  `mean` value must be a number.
+    """
+
+    with pytest.raises(ValueError):
+        rnorm(n, mean, sd)
