@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v0.1.0 (2025-01-30)
+
+### Features
+
+- Adding the ci-cd-badge - done by Jason Lee
+  ([`0d39155`](https://github.com/UBC-MDS/Group24-pystats/commit/0d3915584e622be84174e004dc2cc6934795826a))
+
+
 ## v0.0.2 (2025-01-30)
 
 ### Bug Fixes
