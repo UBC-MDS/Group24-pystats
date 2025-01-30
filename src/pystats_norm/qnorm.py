@@ -10,13 +10,13 @@ def qnorm(p, mean=0, sd=1, lower_tail=True):
 
     Parameters
     ----------
-    p: np.float64
-        The probability for which to find the quantile. p must be between 0 and 1 (exclusive).
+    p: np.float
+        The probability for which to find the quantile. Must be between 0 and 1 (exclusive).
 
-    mean: np.float64, optional
+    mean: np.float, optional
         The mean (average) of the normal distribution. Default is 0.
         
-    std_dev: np.float64, optional
+    sd: np.float, optional
         The standard deviation of the normal distribution. Default is 1.
 
     lower_tail: bool, optional
@@ -26,7 +26,7 @@ def qnorm(p, mean=0, sd=1, lower_tail=True):
         
     Returns
     -------
-    np.float64
+    np.float
         Returns the value of the inverse cumulative density function (cdf) of the normal distribution 
         given a certain random variable p, a population mean μ, and the population standard deviation σ.
 
