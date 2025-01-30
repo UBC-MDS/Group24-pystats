@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v0.1.6 (2025-01-30)
+
+### Bug Fixes
+
+- Added 2 normal cases with small values of p - Feedback addressed by Jason Lee
+  ([`dc84468`](https://github.com/UBC-MDS/Group24-pystats/commit/dc84468fd278fb0def86c0152af9bf155fa7b389))
+
+
 ## v0.1.5 (2025-01-30)
 
 ### Bug Fixes
