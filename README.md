@@ -1,5 +1,5 @@
 [![Documentation Status](https://readthedocs.org/projects/pystats-norm/badge/?version=latest)](https://pystats-norm.readthedocs.io/en/latest/?badge=latest)
-
+[![codecov](https://codecov.io/github/UBC-MDS/Group24-pystats/graph/badge.svg?token=YqaFvm1hzi)](https://codecov.io/github/UBC-MDS/Group24-pystats)
 # pystats_norm
 
 <a href="https://github.com/UBC-MDS/Group24-pystats">
