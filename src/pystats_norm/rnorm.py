@@ -36,7 +36,7 @@ def rnorm(n, mean=0, sd=1):
     if not isinstance(sd, (int, np.float64)):
         raise ValueError('The standard deviation value must be a number!')
     if sd<0:
-        raise ValueError('The standard deviation must be a positive number!')
+        raise ValueError('The standard deviation must be a positive number or zero!')
     
     # Return an empty array if n = 0 is passed
     if n == 0:
