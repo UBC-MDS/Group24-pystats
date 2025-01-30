@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v0.1.4 (2025-01-30)
+
+### Bug Fixes
+
+- Revised ValueError comment - feedback addressed by Jason Lee
+  ([`2823927`](https://github.com/UBC-MDS/Group24-pystats/commit/28239274853a0a576a832d58281a41f9c3653830))
+
+
 ## v0.1.3 (2025-01-30)
 
 ### Bug Fixes
