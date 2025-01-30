@@ -80,6 +80,9 @@ Interested in contributing? Check out the [contributing guidelines](https://pyst
 
 `pystats_norm` was created by Sarah Eshafi, Jason Lee, Abdul Safdar, Rong Wan. It is licensed under the terms of the MIT license.
 
+Creative common license
+documentation and usage examples by Jason Lee, Sarah Eshafi, Abdul Safdar, Rong Wan are licensed under CC BY 4.0 
+
 ## Credits
 
 `pystats_norm` was created with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
