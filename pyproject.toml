@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pystats_norm"
-version = "0.1.4"
+version = "0.1.5"
 description = "A package for evaluating distributions in python"
 authors = ["Sarah Eshafi, Jason Lee, Abdul Safdar, Rong Wan"]
 license = "MIT"

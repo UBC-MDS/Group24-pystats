@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v0.1.5 (2025-01-30)
+
+### Bug Fixes
+
+- Updated value error for rnorm function as sd can be zero as well. Addressed by Abdul
+  ([`b2c25b5`](https://github.com/UBC-MDS/Group24-pystats/commit/b2c25b5ebcafffe062a0af557bb59cc1f2178272))
+
+
 ## v0.1.4 (2025-01-30)
 
 ### Bug Fixes
