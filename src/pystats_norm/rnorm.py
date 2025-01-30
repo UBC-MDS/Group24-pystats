@@ -9,9 +9,9 @@ def rnorm(n, mean=0, sd=1):
     ----------
     n : int
         The number of random variables to be simulated.
-    mean : np.float, optional
+    mean : np.float64, optional
         The mean value of the normal distribution. Default is 0.
-    sd : np.float, optional
+    sd : np.float64, optional
         The standard deviation of the normal distribution. Default is 1.
     
     Returns
@@ -31,9 +31,9 @@ def rnorm(n, mean=0, sd=1):
         raise ValueError('n must be an integer!')
     if n<0:
         raise ValueError('n must be a positive integer!')
-    if not isinstance(mean, (int, np.float)):
+    if not isinstance(mean, (int, np.float64)):
         raise ValueError('The mean value must be a number!')
-    if not isinstance(sd, (int, np.float)):
+    if not isinstance(sd, (int, np.float64)):
         raise ValueError('The standard deviation value must be a number!')
     if sd<0:
         raise ValueError('The standard deviation must be a positive number!')
