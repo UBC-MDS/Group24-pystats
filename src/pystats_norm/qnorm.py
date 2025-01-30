@@ -62,7 +62,7 @@ def qnorm(p, mean=0, sd=1, lower_tail=True):
         raise ValueError("p must be between 0 and 1 (exclusive).")
     
     if not sd > 0:
-        raise ValueError("standard deviation must be non-negative")
+        raise ValueError("standard deviation must be positive")
     
     if lower_tail:
         result = mean + sd * np.sqrt(2) * erfinv(2 * p - 1)
