@@ -9,9 +9,9 @@ def rnorm(n, mean=0, sd=1):
     ----------
     n : int
         The number of random variables to be simulated.
-    mean : float, optional
+    mean : np.float64, optional
         The mean value of the normal distribution. Default is 0.
-    sd : float, optional
+    sd : np.float64, optional
         The standard deviation of the normal distribution. Default is 1.
     
     Returns
@@ -26,23 +26,23 @@ def rnorm(n, mean=0, sd=1):
     array([6.3245, 4.5983])
     """
 
-    #Checking for invalid inputs
+    # Checking for invalid inputs
     if not isinstance(n, int):
         raise ValueError('n must be an integer!')
     if n<0:
         raise ValueError('n must be a positive integer!')
-    if not isinstance(mean, (int, float)):
+    if not isinstance(mean, (int, np.float64)):
         raise ValueError('The mean value must be a number!')
-    if not isinstance(sd, (int, float)):
+    if not isinstance(sd, (int, np.float64)):
         raise ValueError('The standard deviation value must be a number!')
     if sd<0:
         raise ValueError('The standard deviation must be a positive number!')
     
-    #Return an empty array if n = 0 is passed
+    # Return an empty array if n = 0 is passed
     if n == 0:
         return np.array([])
     
-    # Applying Box-Muller Transform to Return a random normal array. 
+    # Applying Box-Muller Transform to return a random normal array. 
     u1 = np.random.rand(n // 2 + 1)
     u2 = np.random.rand(n // 2 + 1)
 
