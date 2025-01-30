@@ -36,8 +36,8 @@ def pnorm(q, mean=0, sd=1, lower_tail=True):
         raise TypeError(f"Expected variable lower_tail to be boolean, got {type(lower_tail)}")
 
     # Value checks    
-    if not sd >= 0:
-        raise ValueError("Standard deviation must be non-negative")
+    if sd <= 0:
+        raise ValueError("Standard deviation must be positive")
     
     if lower_tail:
         result = 1/2 * (1 + erf((q-mean)/(np.sqrt(2)*sd)))
