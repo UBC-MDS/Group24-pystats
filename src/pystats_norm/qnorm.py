@@ -11,12 +11,12 @@ def qnorm(p, mean=0, sd=1, lower_tail=True):
     Parameters
     ----------
     p: np.float64
-        The probability for which to find the quantile.
+        The probability for which to find the quantile. Must be between 0 and 1 (exclusive).
 
     mean: np.float64, optional
         The mean (average) of the normal distribution. Default is 0.
         
-    std_dev: np.float64, optional
+    sd: np.float64, optional
         The standard deviation of the normal distribution. Default is 1.
 
     lower_tail: bool, optional
