@@ -19,7 +19,9 @@ def test_output_datatype():
             (0.99, 0, 1, True, norm.ppf(0.99)),
             (0.99, 0, 1, False, norm.isf(0.99)),
             (0.99, 10, 5, True, norm.ppf(0.99, 10, 5)),
-            (0.99, 10, 5, False, norm.isf(0.99, 10, 5))
+            (0.99, 10, 5, False, norm.isf(0.99, 10, 5)),
+            (0.01, 0, 1, True, norm.ppf(0.01, 0, 1)),
+            (0.01, 0, 1, False, norm.isf(0.01, 0, 1))
         ]
 )
 def test_normal_cases(p, mean, sd, lower_tail, expected, tol=1e-6):
