@@ -42,7 +42,7 @@ def rnorm(n, mean=0, sd=1):
     if n == 0:
         return np.array([])
     
-    # Applying Box-Muller Transform to Return a random normal array. 
+    # Applying Box-Muller Transform to return a random normal array. 
     u1 = np.random.rand(n // 2 + 1)
     u2 = np.random.rand(n // 2 + 1)
 
