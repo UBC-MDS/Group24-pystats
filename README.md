@@ -1,6 +1,6 @@
 [![Documentation Status](https://readthedocs.org/projects/pystats-norm/badge/?version=latest)](https://pystats-norm.readthedocs.io/en/latest/?badge=latest)
 
-# pystats
+# pystats_norm
 
 <a href="https://github.com/UBC-MDS/Group24-pystats">
   <img src="https://github.com/UBC-MDS/Group24-pystats/blob/main/assets/pystat_logo.png" alt="App Platform" width="200">
