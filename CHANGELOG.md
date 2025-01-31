@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v0.1.7 (2025-01-31)
+
+### Bug Fixes
+
+- Remove unused code feedback addressed by Rong Wan
+  ([`56a0b46`](https://github.com/UBC-MDS/Group24-pystats/commit/56a0b462a2524ae7552bee8980f6ea7d0205aecd))
+
+
 ## v0.1.6 (2025-01-30)
 
 ### Bug Fixes
