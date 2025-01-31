@@ -63,7 +63,4 @@ def dnorm(x, mean=0, sd=1):
     
     return result_df
 
-# # Example usage
-# if __name__ == "__main__":
-#     result = dnorm(1.96, mean=0, sd=1)
-#     print(result)
+
