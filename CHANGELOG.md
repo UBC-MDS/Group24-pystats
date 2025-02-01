@@ -55,7 +55,7 @@
 - Updated docstring for consistency - feedback addressed by Jason Lee
   ([`01ee74e`](https://github.com/UBC-MDS/Group24-pystats/commit/01ee74eb5d9d1026f4ff17a64051c34e65033bd8))
 
-- Updated docstrings to refer to float as np.float64 for consistency. Addressed by Abdul
+- Updated docstrings to refer to float as np.float64 for consistency. feedback Addressed by Abdul
   ([`c282aa3`](https://github.com/UBC-MDS/Group24-pystats/commit/c282aa3d3966d001324949d74ac42e0e5e44750c))
 
 - Updated qnorm function docstring - feedback addressed by Jason Lee
@@ -72,7 +72,7 @@
 - Updated pnorm function to avoid error when sd=0. Feedback addressed by Sarah Eshafi
   ([`3d13616`](https://github.com/UBC-MDS/Group24-pystats/commit/3d13616fc8ffe06f1722c25e47678019bd91f799))
 
-- Updated rnorm.py tests to use mark parametrize for readability
+- Updated rnorm.py tests to use mark parametrize for readability. feedback Addressed by Abdul
   ([`8787c9c`](https://github.com/UBC-MDS/Group24-pystats/commit/8787c9cd043b9ab0f82d00cf155542e0f8bf6b77))
 
 
@@ -93,12 +93,6 @@
 
 - Update aliasing in rnorm.py to address Milestone 1 and 2 Feedback. Addressed by Abdul Safdar
   ([`8f2db4c`](https://github.com/UBC-MDS/Group24-pystats/commit/8f2db4c6ef5a8e538d316d096e4d6901c5f6c499))
-
-- Updated docstrings to refer to float as np.float for consistency. Addressed by Abdul
-  ([`54927e8`](https://github.com/UBC-MDS/Group24-pystats/commit/54927e83e1256742c47dee3d0534621852227eb7))
-
-- Updated docstrings to refer to float as np.float64 for consistency. Addressed by Abdul
-  ([`a362bc6`](https://github.com/UBC-MDS/Group24-pystats/commit/a362bc6c2b5df3283467124e6e96143ad98c9213))
 
 
 ## v0.0.1 (2025-01-30)
